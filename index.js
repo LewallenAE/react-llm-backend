@@ -8,7 +8,10 @@ const OpenAI = require('openai');
 const app = express();
 const port = process.env.PORT || 3001;
 
-app.use(cors());
+app.use(cors({
+    origin: 'https://react-llm-chat.vercel.app', // Replace with your frontend URL
+}));
+
 app.use(express.json());
 
 
